@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>StreamVault+ | Account</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ACCOUNT PAGE: slick, modern, trustworthy-looking -->
+  <main id="screen-account" class="screen">
+    <header class="sv-nav">
+      <div class="sv-logo"><span class="sv-logo-mark">S</span>StreamVault<span class="sv-plus">+</span></div>
+      <nav class="sv-nav-links">
+        <span>Home</span><span>Browse</span><span>My List</span><span class="sv-nav-active">Account</span>
+      </nav>
+      <div class="sv-avatar" aria-hidden="true">YOU</div>
+    </header>
+
+    <div id="account-banner" class="sv-banner hidden" role="status"></div>
+
+    <section class="sv-hero">
+      <p class="sv-eyebrow">Your plan</p>
+      <h1>StreamVault+ <span class="sv-grad">Ultra Max Premium</span></h1>
+      <p class="sv-sub">Member since forever. Billed monthly, loved eternally.</p>
+      <div class="sv-plan-card">
+        <div>
+          <div class="sv-price">$19.99<span>/month</span></div>
+          <div class="sv-renew">Next renewal: whenever you least expect it</div>
+        </div>
+        <button class="sv-cta" type="button">Upgrade to Ultra Max Premium Gold</button>
+      </div>
+    </section>
+
+    <section class="sv-benefits">
+      <h2>Everything you get to keep</h2>
+      <div class="sv-grid">
+        <article class="sv-card"><div class="sv-icon">&#9733;</div><h3>Unlimited streaming</h3><p>Watch as much as you want, whenever you want, until you suddenly remember you have a life.</p></article>
+        <article class="sv-card"><div class="sv-icon">&#9889;</div><h3>Ultra-HD-ish</h3><p>Now in 4K*. (*When the stars align and your router believes in itself.)</p></article>
+        <article class="sv-card"><div class="sv-icon">&#9829;</div><h3>Exclusive originals</h3><p>Shows no one asked for, made with love and a very large budget for trailers.</p></article>
+        <article class="sv-card"><div class="sv-icon">&#9728;</div><h3>Download &amp; go</h3><p>Take your favourites offline. They will be waiting right here when you come back.</p></article>
+        <article class="sv-card"><div class="sv-icon">&#9835;</div><h3>Six profiles</h3><p>One for you, one for the dog, four for the people you are sharing with.</p></article>
+        <article class="sv-card"><div class="sv-icon">&#10003;</div><h3>Zero ads (mostly)</h3><p>Just a few friendly reminders about how great we are. Constantly.</p></article>
+      </div>
+      <div class="sv-center"><button class="sv-cta sv-cta-wide" type="button">Upgrade now and save 0%</button></div>
+    </section>
+
+    <footer class="sv-footer">
+      <p>&copy; StreamVault+ Entertainment Group. All rights reserved. Please enjoy responsibly.</p>
+      <p class="sv-cancel-row"><a href="#" id="btn-cancel" role="button">cancel subscription</a></p>
+    </footer>
+  </main>
+
+  <!-- INTRO MODAL -->
+  <div id="screen-intro" class="screen overlay hidden">
+    <div class="dialog">
+      <div class="dialog-title">Exit Verification Challenge&trade;</div>
+      <div class="dialog-body">
+        <h2>Exit Verification Challenge&trade;</h2>
+        <p>Close all popups within 30 seconds to prove you really want to leave.</p>
+        <p class="dialog-fine">Some popups may behave unexpectedly. Some popups may have feelings. Please read every window carefully.</p>
+        <div id="intro-message" class="intro-message"></div>
+        <button id="btn-begin" class="btn-big" type="button">Begin</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- DESKTOP -->
+  <div id="desktop" class="screen hidden">
+    <div id="windows"></div>
+    <div id="toast" class="toast hidden" role="status"></div>
+    <div id="taskbar">
+      <div class="task-start">Start</div>
+      <div class="task-spacer"></div>
+      <div class="task-cell" title="Time left">Time left: <span id="timer">30.0</span>s</div>
+      <div class="task-cell" title="Windows remaining">Windows: <span id="remaining">0</span></div>
+      <div class="task-cell task-clock" id="clock">12:00</div>
+    </div>
+  </div>
+
+  <!-- RESULT (fail) -->
+  <div id="screen-result" class="screen overlay hidden">
+    <div class="dialog dialog-wide">
+      <div class="dialog-title">Verification Result</div>
+      <div class="dialog-body">
+        <h2 id="result-title"></h2>
+        <p id="result-body"></p>
+        <button id="btn-keep" class="btn-huge" type="button">Keep my subscription</button>
+        <button id="btn-retry" class="btn-tiny" type="button">try again</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CANCELLED (win) -->
+  <div id="screen-cancelled" class="screen hidden">
+    <div class="cancelled-card">
+      <div class="cancelled-mark">&#10003;</div>
+      <h1>Your subscription has been cancelled.</h1>
+      <p>We are sad to see you go. Your playlists will miss you, and so will we. Maybe a little more than is healthy.</p>
+      <p class="dialog-fine">Go outside. Look at a tree. You earned it.</p>
+      <p class="cancelled-back-row"><a href="#" id="btn-cancelled-back" role="button">Back to account</a></p>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
